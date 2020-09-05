@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 设计模式 | HCG的博客</title>
+  <title>模板方法模式 | HCG的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="HCG的博客">
-<meta property="og:url" content="http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
+  <meta name="description" content="模板方法模式：定义一个操作中的算法骨架，将其中一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的基本结构即可重新定义该算法的某些特点步骤。 模板方法模式的重点是，不改变一个算法的基本结构即可重新定义该算法的某些特点步骤。 可以在如下情况中考虑使用模板方法模式： 模板方法提供了一个很好的代码复用平台，当遇到一些问题时，从高层抽象看是大致相同的，不同的只是某些具体步骤，那么可以通过模板方法模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模板方法模式">
+<meta property="og:url" content="http://example.com/2020/09/05/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="HCG的博客">
+<meta property="og:description" content="模板方法模式：定义一个操作中的算法骨架，将其中一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的基本结构即可重新定义该算法的某些特点步骤。 模板方法模式的重点是，不改变一个算法的基本结构即可重新定义该算法的某些特点步骤。 可以在如下情况中考虑使用模板方法模式： 模板方法提供了一个很好的代码复用平台，当遇到一些问题时，从高层抽象看是大致相同的，不同的只是某些具体步骤，那么可以通过模板方法模式">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2020/09/05/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/模板方法模式.png">
+<meta property="article:published_time" content="2020-09-05T10:41:04.000Z">
+<meta property="article:modified_time" content="2020-09-05T10:42:00.702Z">
 <meta property="article:author" content="HCG">
+<meta property="article:tag" content="设计模式">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/09/05/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/模板方法模式.png">
   
     <link rel="alternative" href="/atom.xml" title="HCG的博客" type="application/atom+xml">
   
@@ -130,36 +137,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-模板方法模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      模板方法模式
+    </h1>
+  
+
+        
+        <a href="/2020/09/05/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-09-05T10:41:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>模板方法模式：定义一个操作中的算法骨架，将其中一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的基本结构即可重新定义该算法的某些特点步骤。</p>
+<p>模板方法模式的重点是，不改变一个算法的基本结构即可重新定义该算法的某些特点步骤。</p>
+<p>可以在如下情况中考虑使用模板方法模式：</p>
+<p>模板方法提供了一个很好的代码复用平台，当遇到一些问题时，从高层抽象看是大致相同的，不同的只是某些具体步骤，那么可以通过模板方法模式来解决。即将不变的行为定义到超类中，以此去除子类中重复冗余的代码，然后将需要改变的部分留给子类去具体实现。</p>
+<p>另外，在模板方法中存在一个特殊结构：</p>
+<p>即在抽象方法中可以定义一个钩子方法来对算法流程做进一步控制。具体可看例子中的whetherToAddSideDishesHook()方法。</p>
+<div align="center">     <img src="/2020/09/05/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/模板方法模式.png"> </div>
+
+<center>图1：模板方法模式结构图</center>
+
+<p>下面通过一个例子来具体了解模板方法的细节：</p>
+<a id="more"></a>
+
+<p>例子：现在有一个做饭机器，它可以做不同的炒饭，请用模板方法完成。</p>
+<p>分析可知，做炒饭这一任务具有大量重复的内容，可以通过模板方法模式，将重复的流程提升到超类中，将不同炒饭制作时的差异放到子类中具体实现。</p>
+<p>继续分析可知，存在如下角色：</p>
+<p>1.客户clien，定义具体需求，例如需要什么什么炒饭</p>
+<p>2.抽象模板类friedRiceAbstractClass，定义做炒饭的基本流程，并将重复的流程在其中实现，将需要变动的流程下放到子类实现</p>
+<p>3.具体模板类tomatoAndEggFriedRiceConcreteClass/plainFriedRiceConcreteClass，根据实际实现具体的可变动流程</p>
+<p>下面通过具体代码来了解细节：</p>
+<p>第一步：定义抽象模板类friedRiceAbstractClass</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">friedRiceAbstractClass</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">make</span><span class="params">()</span></span>&#123;</span><br><span class="line">        steamedRice();</span><br><span class="line">        <span class="keyword">if</span> (whetherToAddSideDishesHook())&#123;</span><br><span class="line">            prepareSideDishes();</span><br><span class="line">        &#125;</span><br><span class="line">        cook();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">steamedRice</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;蒸好米饭&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">prepareSideDishes</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cook</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;开始炒饭&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">whetherToAddSideDishesHook</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二步：定义具体模板类tomatoAndEggFriedRiceConcreteClass/plainFriedRiceConcreteClass</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">tomatoAndEggFriedRiceConcreteClass</span> <span class="keyword">extends</span> <span class="title">friedRiceAbstractClass</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">prepareSideDishes</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;准备配菜：西红柿，鸡蛋&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">plainFriedRiceConcreteClass</span> <span class="keyword">extends</span> <span class="title">friedRiceAbstractClass</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">prepareSideDishes</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">whetherToAddSideDishesHook</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第三步：定义客户端client</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">client</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        friedRiceAbstractClass tomatoAndEggFriedRice=<span class="keyword">new</span> tomatoAndEggFriedRiceConcreteClass();</span><br><span class="line">        tomatoAndEggFriedRice.make();</span><br><span class="line">        System.out.println(<span class="string">&quot;*********切换下一个炒饭****************&quot;</span>);</span><br><span class="line">        friedRiceAbstractClass plainFriedRice=<span class="keyword">new</span> plainFriedRiceConcreteClass();</span><br><span class="line">        plainFriedRice.make();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">蒸好米饭</span><br><span class="line">准备配菜：西红柿，鸡蛋</span><br><span class="line">开始炒饭</span><br><span class="line">*********切换下一个炒饭****************</span><br><span class="line">蒸好米饭</span><br><span class="line">开始炒饭</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:54:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/">组合模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -171,364 +210,114 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/05/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:53:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/09/05/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          桥接模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/09/05/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">命令模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/">状态模式</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:52:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/">装饰者模式</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/">中介者模式</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:49:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/">职责链模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:47:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">原型模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:46:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/">享元模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:45:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/">外观模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:43:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">适配器模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:42:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">桥接模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/2/">2</a><a class="page-number" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/3/">3</a><a class="extend next" rel="next" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -552,9 +341,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

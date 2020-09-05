@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 设计模式 | HCG的博客</title>
+  <title>HCG的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="HCG的博客">
-<meta property="og:url" content="http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:url" content="http://example.com/page/2/index.html">
 <meta property="og:site_name" content="HCG的博客">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="HCG">
@@ -132,34 +132,47 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-模板方法模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/05/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">模板方法模式</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/05/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-09-05T10:41:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>模板方法模式：定义一个操作中的算法骨架，将其中一些步骤延迟到子类中。模板方法使得子类可以不改变一个算法的基本结构即可重新定义该算法的某些特点步骤。</p>
+<p>模板方法模式的重点是，不改变一个算法的基本结构即可重新定义该算法的某些特点步骤。</p>
+<p>可以在如下情况中考虑使用模板方法模式：</p>
+<p>模板方法提供了一个很好的代码复用平台，当遇到一些问题时，从高层抽象看是大致相同的，不同的只是某些具体步骤，那么可以通过模板方法模式来解决。即将不变的行为定义到超类中，以此去除子类中重复冗余的代码，然后将需要改变的部分留给子类去具体实现。</p>
+<p>另外，在模板方法中存在一个特殊结构：</p>
+<p>即在抽象方法中可以定义一个钩子方法来对算法流程做进一步控制。具体可看例子中的whetherToAddSideDishesHook()方法。</p>
+<div align="center">     <img src="/2020/09/05/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/模板方法模式.png"> </div>
+
+<center>图1：模板方法模式结构图</center>
+
+<p>下面通过一个例子来具体了解模板方法的细节：</p>
+        
+          <a class="article-more-a" href="/2020/09/05/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:54:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/">组合模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -171,33 +184,77 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/05/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:53:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-命令模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/">状态模式</a>
+      <a class="article-title" href="/2020/09/05/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/">命令模式</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/05/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-09-05T10:39:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>命令模式：将一个请求封装为一个对象，从而可用不同的请求对客户进行参数化，对请求排队或记录请求日志，以及支持可撤销的操作。</p>
+<p>命令模式可以较容易的设计一个命令队列，并且在需要的时候，可以容易的将命令记入日志，另外也可以允许接收请求的一方是否决定是否要撤销请求，是否要否决命令等等。</p>
+<div align="center">     <img src="/2020/09/05/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/命令模式.png"> </div>
+
+<center>图1：命令模式结构图</center>
+
+<p>下面通过一个例子详细说明命令模式：</p>
+        
+          <a class="article-more-a" href="/2020/09/05/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -209,33 +266,80 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/05/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:52:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-解释器模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/">装饰者模式</a>
+      <a class="article-title" href="/2020/09/05/%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F/">解释器模式</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/05/%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-09-05T10:38:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>解释器模式：给定一个语言，定义它的文法的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子。</p>
+<p>如下情况可考虑使用解释器模式：</p>
+<p>即当有一个语言需要解释执行，并且可以将该语言中的句子表示为一个抽象语法树时。</p>
+<p>当用了解释器模式，可以容易的改变和扩展文法，因为它使用类来表示文法规则，可以通过继承来改变或扩展该文法，也较为容易实现方法，因为定义抽象语法树种各个节点的类的实现大体类似，这些类都易于直接编写。</p>
+<p>但是解释器模式的缺点是，当文法规则复杂时候，则难以维护管理</p>
+<div align="center">     <img src="/2020/09/05/%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F/解释器模式.png"> </div>
+
+<center>图1：解释器模式结构图</center>
+
+<p> 下面以解释器模式的模板代码来了解此模式的细节：</p>
+        
+          <a class="article-more-a" href="/2020/09/05/%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -247,33 +351,78 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/05/%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-建造者模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/">中介者模式</a>
+      <a class="article-title" href="/2020/09/05/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">建造者模式</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/05/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-09-05T10:36:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>建造者模式：将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示</p>
+<p>当需要将一个复杂对象的构建和它的表示分离，并且让同样的构建过程可以构建出不同的产品，那么可以考虑使用建造者模式。</p>
+<p> 建造者模式可以将产品的内部具体细节和生成过程分割开，若使用了建造者模式，那么用户只需要关心要建造什么产品就可以了，可以忽略掉建造的细节。</p>
+<div align="center">     <img src="/2020/09/05/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/建造者模式.png" width> </div>
+
+<center>图1：建造者模式结构图</center>
+
+<p>下面将以一个具体例子展示建造模式的细节：</p>
+        
+          <a class="article-more-a" href="/2020/09/05/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -285,33 +434,80 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/05/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:49:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-观察者模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/">职责链模式</a>
+      <a class="article-title" href="/2020/09/05/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">观察者模式</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/05/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-09-05T10:34:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>观察者模式：又称发布订阅模式。定义了一种一对多的依赖关系，让多个观察者对象同事监听某一个主题对象。这个主题对象在状态发生变化时，会通知所有观察者对象，使得他们能够自动更新自己。</p>
+<p>观察者模式的关键是主题和观察者。并且当主题Subject发出通知时，并不需要知道谁是它的观察者observer。而其他观察者也不需要知道其他观察者的存在。</p>
+<p>观察者模式本质就是在解耦合，让耦合双方都依赖于抽象而不是依赖具体，从而使得各自的变化都不会影响另一边的变换，即符合依赖倒转原则。</p>
+<p>当遇到如下情况时可以考虑使用观察者模式：</p>
+<p>即当一个对象改变时同时需要改变其他对象，并且它还不知道要改变多少相关的对象的时候。</p>
+<div align="center">     <img src="/2020/09/05/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/观察者模式.png"> </div>
+
+<center>图1：观察者模式结构图</center>
+
+<p> 下面通过一个例子来详细说明观察者模式：</p>
+        
+          <a class="article-more-a" href="/2020/09/05/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -323,33 +519,77 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/05/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:47:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-工厂模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">原型模式</a>
+      <a class="article-title" href="/2020/09/05/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">工厂模式</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/05/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-09-05T10:31:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>工厂模式，即定义一个工厂类，通过其中的静态方法可以获取对应的具体实例，避免了手动去new一个实例。更进一步改进有工厂方法模式。</p>
+<p>工厂方法模式，即定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例延长到其子类。</p>
+<div align="center">     <img src="/2020/09/05/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/工厂方法模式.png"> </div>
+
+<center>工厂方法模式结构图</center>
+
+<p>具体的工厂模式实现有简单工厂模式和工厂方法模式两种比较实用的实现方式。</p>
+        
+          <a class="article-more-a" href="/2020/09/05/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -361,33 +601,80 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/05/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:46:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-访问者模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/">享元模式</a>
+      <a class="article-title" href="/2020/09/05/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/">访问者模式</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/05/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-09-05T10:29:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>访问者模式：表示一个作用于某对象结构中的各元素的操作。它使得可以在不改变各元素的类的前提下定义作用于这些元素的新操作。</p>
+<p>访问者模式使用于数据结构（即各个Element比较确定，不容易改变）相对稳定的系统，它把数据结构和作用于数据结构上的操作解耦，使得操作（即各个Visitor）集合可以相对自由的演化。</p>
+<p>访问者模式的优点是：增加新的操作（Visitor）很容易，即只需要增加一个访问者即可</p>
+<p>缺点是：增加新的数据结构（Element）很难</p>
+<p>访问者模式用到了“双分派”技术：即客户端将具体的访问者/状态（Visitor）传递给元素（Element）完成了第一次分派，元素类（Element）再调用访问者/状态（Visitor）的具体针对自己的访问方法为第二次分派。</p>
+<div align="center">     <img src="/2020/09/05/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/访问者模式.png"> </div>
+
+<center>图1：访问者模式结构图</center>
+
+<p> 下面通过一个例子说明访问者模式：</p>
+        
+          <a class="article-more-a" href="/2020/09/05/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -399,33 +686,78 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/05/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:45:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-迭代器模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/">外观模式</a>
+      <a class="article-title" href="/2020/09/05/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/">迭代器模式</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/05/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-09-05T10:27:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>迭代器模式：提供一种方法顺序访问一个聚合对象中各个元素，而又不暴露该对象的内部表示。</p>
+<p>迭代器模式的本质就是用统一的迭代方式，遍历各种不同的集合（即聚合对象，它们内部实现聚合的方式不同，例如有的是数组，有的是链表），迭代器模式对外提供了统一的遍历方式。</p>
+<p>迭代器模式就是分离了集合对象的遍历行为，抽象出一个迭代器类来负责，这样既可以做到不暴露集合的内部结构，又可以让外部代码透明的访问内部的数据。</p>
+<div align="center">     <img src="/2020/09/05/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/迭代器模式.png"> </div>
+
+<center>图1：迭代器模式结构图</center>
+
+<p> 下面通过一个例子来了解迭代器模式的详情：</p>
+        
+          <a class="article-more-a" href="/2020/09/05/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -437,33 +769,78 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/05/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:43:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-代理模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">适配器模式</a>
+      <a class="article-title" href="/2020/09/05/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/">代理模式</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/05/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-09-05T10:26:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>代理模式：为其他对象提供一种代理以控制对这个对象的访问。</p>
+<p>代理模式分为动态代理和静态代理</p>
+<p>代理模式主要是为了增强类的功能，并且动态代理可以只声明接口，然后再需要的时候再动态生成接口中各个具体方法，增加了灵活性。</p>
+<div align="center">     <img src="/2020/09/05/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/代理模式.png"> </div>
+
+<center>图1：代理模式结构图</center>
+
+<p>下面通过代理模式模板代码说明代理模式：</p>
+        
+          <a class="article-more-a" href="/2020/09/05/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -475,33 +852,78 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/05/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:42:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-策略模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
     <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">桥接模式</a>
+      <a class="article-title" href="/2020/09/05/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">策略模式</a>
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/05/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-09-05T10:22:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>策略模式：定义算法家族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化，不会影响到使用算法的客户。</p>
+<p>策略模式封装了变化，封装了算法。策略模式封装了几乎任何类型的规则，只要在分析中发现需要再不同情况下应用不同规则，就可以考虑使用策略模式。</p>
+<p>策略模式封装了一种定义一系列算法的方法，算法完成的任务相同，只是实现方式不同，并且可以采用相同的方式调用算法，这样减少了算法之间的耦合。</p>
+<div align="center">     <img src="/2020/09/05/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/策略模式.png"> </div>
+
+<center>图1：策略模式结构图</center>
+
+<p>下面通过策略模式代码框架展示此模式细节：</p>
+        
+          <a class="article-more-a" href="/2020/09/05/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -513,21 +935,43 @@
 		</ul>
 	</div>
 
-          
+      
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/05/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
-  
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+  
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/2/">2</a><a class="page-number" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/3/">3</a><a class="extend next" rel="next" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/2/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -551,10 +995,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
+		isHome: true,
 		isPost: false,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

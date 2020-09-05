@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 设计模式 | HCG的博客</title>
+  <title>适配器模式 | HCG的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="HCG的博客">
-<meta property="og:url" content="http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
+  <meta name="description" content="适配器模式：将一个类的接口转换成客户希望的另外一个接口。Adapter模式使得原本由于接口不兼顾而不能一起工作的那些类可以一起工作。 适配器模式具体实现方法上有类适配器模式和对象适配器两种实现方式。但是由于Java是单继承的，所以更应该重点学习对象适配器。 当双方的需求都不能改变时候可以考虑使用适配器模式。         图1：适配器模式结构图  下面通过一个例子来看看适配器模式的具体细节。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="适配器模式">
+<meta property="og:url" content="http://example.com/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="HCG的博客">
+<meta property="og:description" content="适配器模式：将一个类的接口转换成客户希望的另外一个接口。Adapter模式使得原本由于接口不兼顾而不能一起工作的那些类可以一起工作。 适配器模式具体实现方法上有类适配器模式和对象适配器两种实现方式。但是由于Java是单继承的，所以更应该重点学习对象适配器。 当双方的需求都不能改变时候可以考虑使用适配器模式。         图1：适配器模式结构图  下面通过一个例子来看看适配器模式的具体细节。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/适配器模式.png">
+<meta property="article:published_time" content="2020-09-05T10:43:48.000Z">
+<meta property="article:modified_time" content="2020-09-05T10:44:43.919Z">
 <meta property="article:author" content="HCG">
+<meta property="article:tag" content="设计模式">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/适配器模式.png">
   
     <link rel="alternative" href="/atom.xml" title="HCG的博客" type="application/atom+xml">
   
@@ -130,340 +137,70 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-适配器模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:54:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/">组合模式</a>
+    <h1 class="article-title" itemprop="name">
+      适配器模式
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:53:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/">状态模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:52:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/">装饰者模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/">中介者模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:49:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/">职责链模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:47:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">原型模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:46:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/">享元模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:45:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/">外观模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+        
+        <a href="/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
   	<time datetime="2020-09-05T10:43:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">适配器模式</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>适配器模式：将一个类的接口转换成客户希望的另外一个接口。Adapter模式使得原本由于接口不兼顾而不能一起工作的那些类可以一起工作。</p>
+<p>适配器模式具体实现方法上有类适配器模式和对象适配器两种实现方式。但是由于Java是单继承的，所以更应该重点学习对象适配器。</p>
+<p>当双方的需求都不能改变时候可以考虑使用适配器模式。</p>
+<div align="center">     <img src="/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/适配器模式.png"> </div>
 
-        <div class="article-info info-on-right">
-          
+<center>图1：适配器模式结构图</center>
+
+<p>下面通过一个例子来看看适配器模式的具体细节。</p>
+<a id="more"></a>
+
+<p>例子，手机充电器需要5v的电压，但是电源插座提供的是220v的电压，现在要求使用适配器模式实现转换。</p>
+<p>分析可知，在此问题中存在如下几个角色：</p>
+<p>1.手机客户phoneClient，它需要从电源处获得5v的电压来为自己充电</p>
+<p>2.充电器的具体要求charger5voltsTarget，定义客户的具体要求</p>
+<p>3.具体的电源powerSupplyAdapteeSpecificFeatures，需要适配的对象，它的功能客户需要，但是客户由无法直接使用</p>
+<p>4.适配器charger5voltsAdapter，它通过获得需要适配的对象，并且获取它的功能，然后在其内部进行转换适配工作，最后输出客户可以使用的结果</p>
+<p>下面是具体的代码实现：</p>
+<p>第一步：定义需要适配的具体的电源，提供具体功能的类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">powerSupplyAdaptee</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">output220VSpecificFeatures</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">220</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二步：定义客户需要使用的功能，即目标接口。此接口，只是定义客户需要什么样的功能。例如本例，客户需要一个输出5v电压的功能outputs5VRequst()</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">charger5voltsTarget</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">outputs5VRequst</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第三步：定义适配器，使用需要适配的对象的功能，去具体实现客户的具体目标，并且返回客户需要的结果。实现目标接口，来知道客户具体是什么要求，然后通过聚合一个被适配对象或者继承被适配类获得功能，最后在其内部做转换输出客户需要的结果。</p>
+<p>方案1：对象适配器实现，通过聚合一个被适配对象来获得被适配器的功能</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">charger5voltsAdapter</span> <span class="keyword">implements</span> <span class="title">charger5voltsTarget</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> powerSupplyAdaptee powerSupplyAdaptee=<span class="keyword">new</span> powerSupplyAdaptee();</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">outputs5VRequst</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> powerSupplyAdaptee.output220VSpecificFeatures()/<span class="number">44</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方案2：类适配器实现，通过继承被适配对象来获得被适配器的功能</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">charger5voltsAdapter2</span> <span class="keyword">extends</span> <span class="title">powerSupplyAdaptee</span> <span class="keyword">implements</span> <span class="title">charger5voltsTarget</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">outputs5VRequst</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.output220VSpecificFeatures()/<span class="number">44</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第四步：客户使用适配器。客户只需要调用具体的适配器就可以获得需要的功能，而不需要知道具体怎么实现的。就像人们使用充电器充电而不需要知道具体怎么将220v电压转换为5v电压的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">phoneClient</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        charger5voltsTarget charger5voltsTarget=<span class="keyword">new</span> charger5voltsAdapter();</span><br><span class="line">        charger5voltsTarget charger5voltsTarget2=<span class="keyword">new</span> charger5voltsAdapter2();</span><br><span class="line">        System.out.println(<span class="string">&quot;现在使用的电压：&quot;</span>+charger5voltsTarget.outputs5VRequst()+<span class="string">&quot;V&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;现在使用的电压：&quot;</span>+charger5voltsTarget2.outputs5VRequst()+<span class="string">&quot;V&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">现在使用的电压：<span class="number">5</span>V</span><br><span class="line">现在使用的电压：<span class="number">5</span>V</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -475,60 +212,114 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:42:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/09/05/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          外观模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/09/05/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">桥接模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">桥接模式</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/2/">2</a><a class="page-number" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/3/">3</a><a class="extend next" rel="next" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
   
 
 
@@ -552,9 +343,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 设计模式 | HCG的博客</title>
+  <title>中介者模式 | HCG的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="HCG的博客">
-<meta property="og:url" content="http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
+  <meta name="description" content="中介者模式：用一个中介对象来封装一系列的对象交互。中介者使得各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变他们之间的交互。 中介者模式又称为调停者模式，就是有一个中间人居中协调各方的意思。 一般设计时候，通常会将不同功能的类分开设计，然后它们之间互相传递消息来协调工作。但是尽管将各个功能部件分割开设计这样会增加各部分的可复用性，但是对象之间相互连接的激增又会降低可复用性，这是因为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="中介者模式">
+<meta property="og:url" content="http://example.com/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="HCG的博客">
+<meta property="og:description" content="中介者模式：用一个中介对象来封装一系列的对象交互。中介者使得各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变他们之间的交互。 中介者模式又称为调停者模式，就是有一个中间人居中协调各方的意思。 一般设计时候，通常会将不同功能的类分开设计，然后它们之间互相传递消息来协调工作。但是尽管将各个功能部件分割开设计这样会增加各部分的可复用性，但是对象之间相互连接的激增又会降低可复用性，这是因为">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/中介者模式.png">
+<meta property="article:published_time" content="2020-09-05T10:50:53.000Z">
+<meta property="article:modified_time" content="2020-09-05T10:51:44.811Z">
 <meta property="article:author" content="HCG">
+<meta property="article:tag" content="设计模式">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/中介者模式.png">
   
     <link rel="alternative" href="/atom.xml" title="HCG的博客" type="application/atom+xml">
   
@@ -130,150 +137,75 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-中介者模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:54:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/">组合模式</a>
+    <h1 class="article-title" itemprop="name">
+      中介者模式
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:53:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/">状态模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:52:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/">装饰者模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+        
+        <a href="/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
   	<time datetime="2020-09-05T10:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/">中介者模式</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>中介者模式：用一个中介对象来封装一系列的对象交互。中介者使得各对象不需要显式地相互引用，从而使其耦合松散，而且可以独立地改变他们之间的交互。</p>
+<p>中介者模式又称为调停者模式，就是有一个中间人居中协调各方的意思。</p>
+<p>一般设计时候，通常会将不同功能的类分开设计，然后它们之间互相传递消息来协调工作。但是尽管将各个功能部件分割开设计这样会增加各部分的可复用性，但是对象之间相互连接的激增又会降低可复用性，这是因为大量的连接使得一个对象很难在没有其他对象的支撑下独立工作，系统整体成为了一个不可分割的整体，所以对系统的行为进行大改就非常困难了。</p>
+<p>所以这就对应到一个设计时应该遵守的原则——迪米特法则。迪米特法则：如果两个类不必彼此直接通信，那么这两个类就不应当发生直接的相互作用。如果其中一个类需要调用另一个类的某一个方法的话，可以通过第三者转发这个调用。</p>
+<p>中介者模式的优点是其降低了各个功能部件（Colleague）的耦合性，使其可以独立的更改，并且由于使用中介者（Mediator）将各个部件如何协调工作进行了抽象，使得可以将关注点更多的放在部件如何交互上来，可以站在一个宏观的角度去看待系统。</p>
+<p>但是缺点是，由于中介者（Mediator）集中了系统的控制，从而使得其非常复杂。</p>
+<p>当遇到如下情况时可以考虑使用中介者模式：</p>
+<p>即中介者模式一般应用于一组对象以定义良好但是复杂的方式进行通信的场合，以及想定制一个分部在多个类中的行为，而又不想生成太多的子类的场合。</p>
+ <div align="center">     <img src="/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/中介者模式.png"> </div>
 
-        <div class="article-info info-on-right">
-          
+<center>图1：中介者模式结构图</center>
+
+<p> 下面通过一个例子来说明中介者模式：</p>
+<a id="more"></a>
+
+<p>例子：男女双方通过婚介所进行联系，请用中介者模式实现</p>
+<p>通过分析知道存在如下的角色：</p>
+<p>1.客户端client，提出了双发要通过中介者进行通信</p>
+<p>2.抽象中介者mediator，定义了中介者应该具有的功能send(String message,colleague colleague)，即转发从某个部件接受到的信息，具体怎么转发由具体实现者定义</p>
+<p>3.具体中介者marriageAgencyConcreteMediator，通过聚合其需要知道的部件来具体完成send功能</p>
+<p>4.抽象部件colleague，定义部件的对外通信接口，中介者使用它们为部件提供通信功能，send(String message)部件对外发送消息，receiveNotification(String message)部件接受到外部传来的消息</p>
+<p>5.具体部件manConcreteColleague/womanConcreteColleague，实现通信接口send和 receiveNotification，然后根据需要可以在接受到消息后进行判断，调用其他方法完成任务</p>
+<p>下面是详细代码：</p>
+<p>第一步：定义抽象中介者mediator</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">mediator</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">(String message,colleague colleague)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二步：定义抽象部件colleague</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">colleague</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">(String message)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">receiveNotification</span><span class="params">(String message)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第三步：定义具体部件manConcreteColleague/womanConcreteColleague</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">manConcreteColleague</span> <span class="keyword">implements</span> <span class="title">colleague</span></span>&#123;</span><br><span class="line">    mediator mediator=<span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">manConcreteColleague</span><span class="params">(mediator mediator)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.mediator=mediator;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">        mediator.send(message,<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">receiveNotification</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;男方接受到的信息：&quot;</span>+message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">womanConcreteColleague</span> <span class="keyword">implements</span> <span class="title">colleague</span></span>&#123;</span><br><span class="line">    mediator mediator=<span class="keyword">null</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">womanConcreteColleague</span><span class="params">(mediator mediator)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.mediator=mediator;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">        mediator.send(message,<span class="keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">receiveNotification</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;女方接受到的信息：&quot;</span>+message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第四步：具体中介者marriageAgencyConcreteMediator</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">marriageAgencyConcreteMediator</span> <span class="keyword">implements</span> <span class="title">mediator</span></span>&#123;</span><br><span class="line">    colleague manColleague=<span class="keyword">null</span>;</span><br><span class="line">    colleague womanColleague=<span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setManColleague</span><span class="params">(colleague manColleague)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.manColleague = manColleague;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setWomanColleague</span><span class="params">(colleague womanColleague)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.womanColleague = womanColleague;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">send</span><span class="params">(String message, colleague colleague)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (colleague==manColleague)&#123;</span><br><span class="line">            womanColleague.receiveNotification(message);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (colleague==womanColleague)&#123;</span><br><span class="line">            manColleague.receiveNotification(message);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第五步：定义客户端client</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">client</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       marriageAgencyConcreteMediator marriageAgencyConcreteMediator=<span class="keyword">new</span> marriageAgencyConcreteMediator();</span><br><span class="line">       System.out.println(<span class="string">&quot;******男女双方认识婚姻中介者（媒婆）******&quot;</span>);</span><br><span class="line">       manConcreteColleague manConcreteColleague=<span class="keyword">new</span> manConcreteColleague(marriageAgencyConcreteMediator);</span><br><span class="line">       womanConcreteColleague womanConcreteColleague=<span class="keyword">new</span> womanConcreteColleague(marriageAgencyConcreteMediator);</span><br><span class="line">        System.out.println(<span class="string">&quot;******媒婆也认识男女双方了，可以为他们传话了******&quot;</span>);</span><br><span class="line">       marriageAgencyConcreteMediator.setManColleague(manConcreteColleague);</span><br><span class="line">       marriageAgencyConcreteMediator.setWomanColleague(womanConcreteColleague);</span><br><span class="line">       manConcreteColleague.send(<span class="string">&quot;我们约会吧&quot;</span>);</span><br><span class="line">       womanConcreteColleague.send(<span class="string">&quot;好的，非常期待&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">******男女双方认识婚姻中介者（媒婆）******</span><br><span class="line">******媒婆也认识男女双方了，可以为他们传话了******</span><br><span class="line">女方接受到的信息：我们约会吧</span><br><span class="line">男方接受到的信息：好的，非常期待</span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -285,250 +217,114 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:49:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/09/05/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          装饰者模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/09/05/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">职责链模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/">职责链模式</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:47:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">原型模式</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:46:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/">享元模式</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:45:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/">外观模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:43:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">适配器模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:42:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">桥接模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/2/">2</a><a class="page-number" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/3/">3</a><a class="extend next" rel="next" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -552,9 +348,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

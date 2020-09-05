@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 设计模式 | HCG的博客</title>
+  <title>迭代器模式 | HCG的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="HCG的博客">
-<meta property="og:url" content="http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.html">
+  <meta name="description" content="迭代器模式：提供一种方法顺序访问一个聚合对象中各个元素，而又不暴露该对象的内部表示。 迭代器模式的本质就是用统一的迭代方式，遍历各种不同的集合（即聚合对象，它们内部实现聚合的方式不同，例如有的是数组，有的是链表），迭代器模式对外提供了统一的遍历方式。 迭代器模式就是分离了集合对象的遍历行为，抽象出一个迭代器类来负责，这样既可以做到不暴露集合的内部结构，又可以让外部代码透明的访问内部的数据。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="迭代器模式">
+<meta property="og:url" content="http://example.com/2020/09/05/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="HCG的博客">
+<meta property="og:description" content="迭代器模式：提供一种方法顺序访问一个聚合对象中各个元素，而又不暴露该对象的内部表示。 迭代器模式的本质就是用统一的迭代方式，遍历各种不同的集合（即聚合对象，它们内部实现聚合的方式不同，例如有的是数组，有的是链表），迭代器模式对外提供了统一的遍历方式。 迭代器模式就是分离了集合对象的遍历行为，抽象出一个迭代器类来负责，这样既可以做到不暴露集合的内部结构，又可以让外部代码透明的访问内部的数据。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2020/09/05/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/迭代器模式.png">
+<meta property="article:published_time" content="2020-09-05T10:27:38.000Z">
+<meta property="article:modified_time" content="2020-09-05T10:34:09.615Z">
 <meta property="article:author" content="HCG">
+<meta property="article:tag" content="设计模式">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2020/09/05/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/迭代器模式.png">
   
     <link rel="alternative" href="/atom.xml" title="HCG的博客" type="application/atom+xml">
   
@@ -130,36 +137,67 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-迭代器模式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      迭代器模式
+    </h1>
+  
+
+        
+        <a href="/2020/09/05/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
+  	<time datetime="2020-09-05T10:27:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>迭代器模式：提供一种方法顺序访问一个聚合对象中各个元素，而又不暴露该对象的内部表示。</p>
+<p>迭代器模式的本质就是用统一的迭代方式，遍历各种不同的集合（即聚合对象，它们内部实现聚合的方式不同，例如有的是数组，有的是链表），迭代器模式对外提供了统一的遍历方式。</p>
+<p>迭代器模式就是分离了集合对象的遍历行为，抽象出一个迭代器类来负责，这样既可以做到不暴露集合的内部结构，又可以让外部代码透明的访问内部的数据。</p>
+<div align="center">     <img src="/2020/09/05/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/迭代器模式.png"> </div>
+
+<center>图1：迭代器模式结构图</center>
+
+<p> 下面通过一个例子来了解迭代器模式的详情：</p>
+<a id="more"></a>
+
+<p>例子：有两个图书馆，它们内部对书籍的管理采用不同方式，一个用数组管理所有书籍，一个用链表管理所有书籍，现在客户要用统一的方式遍历它们，请用迭代器模式实现。</p>
+<p>分析知道这其中存在如下角色：</p>
+<p>1.客户client，提出具体需求</p>
+<p>2.迭代器抽象类Iterator，定义迭代器要完成的各项任务，此例使用的是Java标准类库定义的Iterator接口</p>
+<p>3.抽象图书馆聚合类libraryAggregate，定义聚合类都有哪些功能</p>
+<p>4.具体的图书馆聚合类bigLibraryConcreteAggregate/smallLibraryConcreteAggregate，定义具体图书馆内部是如何聚合管理图书的，例如用数组，或者链表等等</p>
+<p>5.具体的迭代器类bigLibraryConcreteIterator/smallLibraryConcreteIterator，具体定义迭代器工作方式</p>
+<p>下面是详细代码：</p>
+<p>第一步：定义抽象图书馆聚合类libraryAggregate</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">libraryAggregate</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addBook</span><span class="params">(String bookName)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Iterator <span class="title">createIterator</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二步：定义具体的图书馆聚合类bigLibraryConcreteAggregate/smallLibraryConcreteAggregate</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">bigLibraryConcreteAggregate</span> <span class="keyword">implements</span> <span class="title">libraryAggregate</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">    String[] books;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">bigLibraryConcreteAggregate</span><span class="params">(<span class="keyword">int</span> num)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.books=<span class="keyword">new</span> String[num];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addBook</span><span class="params">(String bookName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (index&lt;books.length)&#123;</span><br><span class="line">            books[index]=bookName;</span><br><span class="line">            index++;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;容量溢出：&quot;</span>+bookName+<span class="string">&quot;入库失败&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> bigLibraryConcreteIterator <span class="title">createIterator</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> bigLibraryConcreteIterator(books);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">smallLibraryConcreteAggregate</span> <span class="keyword">implements</span> <span class="title">libraryAggregate</span></span>&#123;</span><br><span class="line">    ArrayList&lt;String&gt; booksName=<span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addBook</span><span class="params">(String bookName)</span> </span>&#123;</span><br><span class="line">        booksName.add(bookName);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> smallLibraryConcreteIterator <span class="title">createIterator</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> smallLibraryConcreteIterator(booksName);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第三步：定义具体的迭代器类bigLibraryConcreteIterator/smallLibraryConcreteIterator</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">bigLibraryConcreteIterator</span> <span class="keyword">implements</span> <span class="title">Iterator</span> </span>&#123;</span><br><span class="line">    String[] bookName=<span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">bigLibraryConcreteIterator</span><span class="params">(String[] bookName)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.bookName=bookName;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (index&gt;bookName.length-<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">next</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String name=bookName[index];</span><br><span class="line">        index++;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">smallLibraryConcreteIterator</span> <span class="keyword">implements</span> <span class="title">Iterator</span></span>&#123;</span><br><span class="line">    ArrayList&lt;String&gt; booksName=<span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">int</span> index=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">smallLibraryConcreteIterator</span><span class="params">(ArrayList&lt;String&gt; booksName)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.booksName=booksName;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (index&gt;booksName.size()-<span class="number">1</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">next</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        String name=booksName.get(index);</span><br><span class="line">        index++;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第四步：定义客户端</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">client</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        bigLibraryConcreteAggregate bigLibrary=<span class="keyword">new</span> bigLibraryConcreteAggregate(<span class="number">3</span>);</span><br><span class="line">        bigLibrary.addBook(<span class="string">&quot;高等数学&quot;</span>);</span><br><span class="line">        bigLibrary.addBook(<span class="string">&quot;线性代数&quot;</span>);</span><br><span class="line">        bigLibrary.addBook(<span class="string">&quot;概率论&quot;</span>);</span><br><span class="line">        bigLibrary.addBook(<span class="string">&quot;数值分析&quot;</span>);</span><br><span class="line">        bigLibraryConcreteIterator bigLibraryConcreteIterator=bigLibrary.createIterator();</span><br><span class="line">        System.out.println(<span class="string">&quot;****开始遍历****&quot;</span>);</span><br><span class="line">        <span class="keyword">while</span> (bigLibraryConcreteIterator.hasNext())&#123;</span><br><span class="line">            System.out.println(bigLibraryConcreteIterator.next());</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;***********切换聚合类（图书馆）*************&quot;</span>);</span><br><span class="line">        smallLibraryConcreteAggregate smallLibrary=<span class="keyword">new</span> smallLibraryConcreteAggregate();</span><br><span class="line">        smallLibrary.addBook(<span class="string">&quot;经典名著1&quot;</span>);</span><br><span class="line">        smallLibrary.addBook(<span class="string">&quot;经典名著2&quot;</span>);</span><br><span class="line">        smallLibrary.addBook(<span class="string">&quot;经典名著3&quot;</span>);</span><br><span class="line">        smallLibrary.addBook(<span class="string">&quot;经典名著4&quot;</span>);</span><br><span class="line">        smallLibraryConcreteIterator smallLibraryConcreteIterator=smallLibrary.createIterator();</span><br><span class="line">        System.out.println(<span class="string">&quot;****开始遍历****&quot;</span>);</span><br><span class="line">        <span class="keyword">while</span> (smallLibraryConcreteIterator.hasNext())&#123;</span><br><span class="line">            System.out.println(smallLibraryConcreteIterator.next());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">容量溢出：数值分析入库失败</span><br><span class="line">****开始遍历****</span><br><span class="line">高等数学</span><br><span class="line">线性代数</span><br><span class="line">概率论</span><br><span class="line">***********切换聚合类（图书馆）*************</span><br><span class="line">****开始遍历****</span><br><span class="line">经典名著<span class="number">1</span></span><br><span class="line">经典名著<span class="number">2</span></span><br><span class="line">经典名著<span class="number">3</span></span><br><span class="line">经典名著<span class="number">4</span></span><br><span class="line"></span><br><span class="line">Process finished with exit code <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:54:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/">组合模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -171,364 +209,114 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/05/%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:53:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/09/05/%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          访问者模式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/09/05/%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">代理模式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F/">状态模式</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:52:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/">装饰者模式</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F/">中介者模式</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:49:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E8%81%8C%E8%B4%A3%E9%93%BE%E6%A8%A1%E5%BC%8F/">职责链模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:47:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/">原型模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:46:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/">享元模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:45:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F/">外观模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:43:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">适配器模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/05/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2020-09-05T10:42:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/05/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">桥接模式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/2/">2</a><a class="page-number" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/3/">3</a><a class="extend next" rel="next" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -552,9 +340,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
